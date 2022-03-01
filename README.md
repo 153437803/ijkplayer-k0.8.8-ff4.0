@@ -7,7 +7,10 @@ linux for ff4.0--ijk0.8.8--20210426--001
 #
 #### 环境
 ```
-deepin24 + ndk14
+deepin24 + ndk14b
+
+https://www.deepin.org/zh/download/
+https://github.com/android/ndk/wiki/Unsupported-Downloads
 ```
 
 #
