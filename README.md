@@ -14,7 +14,7 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 ```
 
 #
-#### 记录
+#### 记录1 => 编译问题
 ```
 1. undefined reference to "--disable-ffserver"
 #export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-ffserver"
@@ -37,7 +37,7 @@ do-comfile-ffmpeg.sh 修改 FF_ASSEMBLER_SUB_DIRS="arm neon"
 ```
 
 #
-#### giangeng
+#### 记录2 => 解决可能存在与三方依赖库的so文件名重复冲突
 ```
 1. libijkplayer.so
 **/ijkmedia/ijkplayer/Android.mk文件，修改ijkffmpeg、ijksdk和ijkplayer的名称分别为ijkffmpeg***、ijksdk***、ijkplayer***。
@@ -50,7 +50,7 @@ do-comfile-ffmpeg.sh 修改 FF_ASSEMBLER_SUB_DIRS="arm neon"
 3. libijkffmpeg.so，
 **/android/contrib/tools/do-compile-ffmpeg.sh文件，替换其中的两处libijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so。
 ```
-````
+```
 4. libijkffmpeg.so，
 **/android/ijkplayer/**/src/mian/jni/Android.mk文件，替换其中的两处libijkffmpeg.so和ijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so。
 ```
