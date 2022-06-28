@@ -40,19 +40,19 @@ do-comfile-ffmpeg.sh 修改 FF_ASSEMBLER_SUB_DIRS="arm neon"
 #### 记录2 => 解决可能存在与三方依赖库的so文件名重复冲突
 ```
 1. libijkplayer.so
-**/ijkmedia/ijkplayer/Android.mk文件，修改ijkffmpeg、ijksdk和ijkplayer的名称分别为ijkffmpeg***、ijksdk***、ijkplayer***。
+**/ijkmedia/ijkplayer/Android.mk文件，修改ijkffmpeg、ijksdk和ijkplayer的名称分别为ijkffmpeg***、ijksdk***、ijkplayer***
 ```
 ```
 2. libijksdl.so
-**/ijkmedia/ijksdl/Android.mk文件，修改ijkffmpeg和ijksdk的名称分别为ijkffmpeg***、ijksdk***。
+**/ijkmedia/ijksdl/Android.mk文件，修改ijkffmpeg和ijksdk的名称分别为ijkffmpeg***、ijksdk***
 ```
 ```
 3. libijkffmpeg.so，
-**/android/contrib/tools/do-compile-ffmpeg.sh文件，替换其中的两处libijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so。
+**/android/contrib/tools/do-compile-ffmpeg.sh文件，替换其中的两处libijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so
 ```
 ```
 4. libijkffmpeg.so，
-**/android/ijkplayer/**/src/mian/jni/Android.mk文件，替换其中的两处libijkffmpeg.so和ijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so。
+**/android/ijkplayer/**/src/mian/jni/Android.mk文件，替换其中的两处libijkffmpeg.so和ijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so
 ```
 
 #
