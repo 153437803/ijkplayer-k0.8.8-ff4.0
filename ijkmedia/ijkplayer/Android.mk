@@ -21,6 +21,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+APP_ALLOW_MISSING_DEPS=true
 # -mfloat-abi=soft is a workaround for FP register corruption on Exynos 4210
 # http://www.spinics.net/lists/arm-kernel/msg368417.html
 ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
@@ -75,10 +76,10 @@ LOCAL_SRC_FILES += ijkavutil/ijktree.c
 LOCAL_SRC_FILES += ijkavutil/ijkfifo.c
 LOCAL_SRC_FILES += ijkavutil/ijkstl.cpp
 
-LOCAL_SHARED_LIBRARIES := ijkffmpeg ijksdl
+LOCAL_SHARED_LIBRARIES := avffmpeg avsdl
 LOCAL_STATIC_LIBRARIES := android-ndk-profiler ijksoundtouch
 
-LOCAL_MODULE := ijkplayer
+LOCAL_MODULE := avplayer
 
 VERSION_SH  = $(LOCAL_PATH)/version.sh
 VERSION_H   = ijkversion.h

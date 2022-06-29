@@ -347,11 +347,11 @@ do
 done
 
 $CC -lm -lz -shared --sysroot=$FF_SYSROOT -Wl,--no-undefined -Wl,-z,noexecstack $FF_EXTRA_LDFLAGS \
-    -Wl,-soname,libijkffmpeg.so \
+    -Wl,-soname,libavffmpeg.so \
     $FF_C_OBJ_FILES \
     $FF_ASM_OBJ_FILES \
     $FF_DEP_LIBS \
-    -o $FF_PREFIX/libijkffmpeg.so
+    -o $FF_PREFIX/libavffmpeg.so
 
 mysedi() {
     f=$1
