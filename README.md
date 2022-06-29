@@ -130,7 +130,7 @@ libpostproc:
 ```
 
 #
-#### 编译 => 自行下载ijkplayer编译
+#### 编译 => 下载ijkplayer代码
 ```
 1. 安装相关工具
    apt-get update
