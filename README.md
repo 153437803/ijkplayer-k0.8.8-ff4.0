@@ -93,7 +93,7 @@ libpostproc:
 ```
 
 #
-#### 编译
+#### 编译 => 省去clone代码
 ```
 1. 环境变量配置
    /etc/profile
@@ -124,37 +124,49 @@ libpostproc:
    ./compile-ffmpeg.sh all
 ```
 ```
-5. 编译ijlayer
+5. 编译ijkplayer
    cd ..
    ./compile-ijk.sh all
 ```
 
 #
-#### 编译
+#### 编译 => 自行下载ijkplayer编译
 ```
 1. 安装相关工具
    apt-get update
    apt-get install git
    apt-get install yasm
-2. 配置系统环境变量
+```
+```
+2. 环境变量配置
    /etc/profile
    export ANDROID_NDK=/home/kalu/Android/android-ndk-r14b
    export PATH=$ANDROID_NDK:$PATH
    export ANDROID_SDK=/home/kalu/Android/Sdk
    export PATH=${PATH}:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
-3. 设置的环境变量生效[ndk-build -v、adb version]
+```
+```
+3. 环境变量生效[ndk-build -v、adb version]
    source /etc/profile
+```
+```
 4. 下载ijkplayer-android源码
    git clone https://github.com/Bilibili/ijkplayer.git ijkplayer-android
+```
+```
 5. 下载ijkffmpeg、libyuv、libsoundtouch、openssl
    cd ijkplayer-android
    git checkout -B latest k0.8.8
    ./init-android.sh
    ./init-android-openssl.sh
-6.  编译openssl
+```
+```
+6. 编译openssl
    cd android/contrib
    ./compile-openssl.sh clean
    ./compile-openssl.sh all
+```
+```
 7. 编译ffmpeg
    cd ../..
    cd config
@@ -164,7 +176,9 @@ libpostproc:
    cd android/contrib
    ./compile-ffmpeg.sh clean
    ./compile-ffmpeg.sh all
-8. 编译ijlayer
+```
+```
+8. 编译ijkplayer
    cd ..
    ./compile-ijk.sh all
 ```
