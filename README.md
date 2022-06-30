@@ -113,16 +113,16 @@ libpostproc:
    source /etc/profile
 ```
 ```
-4. 下载ffmpeg
-   ./init-android.sh
-```
-```
-5. 下载libyuv
+4. 下载libyuv
    ./init-android-libyuv.sh
 ```
 ```
-6. 下载soundtouch
+5. 下载soundtouch
    ./init-android-soundtouch.sh
+```
+```
+6. 下载ffmpeg
+   ./init-android.sh
 ```
 ```
 7. 下载openssl
