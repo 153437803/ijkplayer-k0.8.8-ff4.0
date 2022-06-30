@@ -79,23 +79,27 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 #### 记录1 => 编译问题
 ```
 1. undefined reference to "--disable-ffserver"
-#export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-ffserver"
+   #export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-ffserver"
 ```
 ```
 2. undefined reference to "--disable-vda"
-#export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-vda"
+   #export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-vda"
 ```
 ```
 3. undefined reference to 'ff_ac3_parse_header'
-export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS –disable-bsf=eac3_core"
+   export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS –disable-bsf=eac3_core"
 ```
 ```
 4. compile-ijk.sh 不生成ijkplayer.so、ijksdk.so
-android/ijkplayer/xx/src/main/jin/Android.mk => 末尾新增 => include ../../../../../../ijkmedia/*.mk
+   android/ijkplayer/xx/src/main/jin/Android.mk => 末尾新增 => include ../../../../../../ijkmedia/*.mk
 ```
 ```
 5. ffmpeg 开启neon
-do-comfile-ffmpeg.sh 修改 FF_ASSEMBLER_SUB_DIRS="arm neon"
+   do-comfile-ffmpeg.sh 修改 FF_ASSEMBLER_SUB_DIRS="arm neon"
+```
+```
+6. so大小 如果不需要视频滤镜功能可以关闭
+   export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-avfilter"
 ```
 
 #
