@@ -101,6 +101,14 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 6. so大小 如果不需要视频滤镜功能可以关闭
    export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-avfilter"
 ```
+```
+7. so输出 地址
+   **/android/ijkplayer/ijkplayer-armv7a/src/main/obj/armv7a/
+```
+```
+8. 权限 终端提示权限拒绝
+   sudo chmod -R 777 **
+```
 
 #
 #### 记录2 => 解决可能存在与三方依赖库的so文件名重复冲突
