@@ -51,26 +51,26 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 7. 下载openssl
    ./init-android-openssl.sh
 ```
+8.  软链module.sh
+   cd config
+   rm module.sh
+   ln -s module-lite.sh module.sh
 ```
-8.  编译openssl
+```
+9.  编译openssl
    cd android/contrib
    ./compile-openssl.sh clean
    ./compile-openssl.sh all
 ```
 ```
-9. 编译ffmpeg
-   cd ../..
-   cd config
-   rm module.sh
-   ln -s module-lite.sh module.sh
-   cd ..
+10. 编译ffmpeg
    cd android/contrib
    ./compile-ffmpeg.sh clean
    ./compile-ffmpeg.sh all
 ```
 ```
-10. 编译ijlayer
-   cd ..
+11. 编译ijlayer
+   cd android
    ./compile-ijk.sh all
 ```
 
