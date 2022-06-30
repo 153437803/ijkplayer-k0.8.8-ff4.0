@@ -16,6 +16,65 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 ```
 
 #
+#### 编译
+```
+1. 安装相关工具
+   apt-get update
+   apt-get install git
+   apt-get install yasm
+```
+```
+2. 配置系统环境变量
+   /etc/profile
+   export ANDROID_NDK=/home/kalu/Android/android-ndk-r14b
+   export PATH=$ANDROID_NDK:$PATH
+   export ANDROID_SDK=/home/kalu/Android/Sdk
+   export PATH=${PATH}:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
+```
+```
+3. 设置的环境变量生效[ndk-build -v、adb version]
+   source /etc/profile
+```
+```
+4. 下载libyuv
+   ./init-android-libyuv.sh
+```
+```
+5. 下载soundtouch
+   ./init-android-soundtouch.sh
+```
+```
+6. 下载ffmpeg
+   ./init-android.sh
+```
+```
+7. 下载openssl
+   ./init-android-openssl.sh
+```
+```
+8.  编译openssl
+   cd android/contrib
+   ./compile-openssl.sh clean
+   ./compile-openssl.sh all
+```
+```
+9. 编译ffmpeg
+   cd ../..
+   cd config
+   rm module.sh
+   ln -s module-lite.sh module.sh
+   cd ..
+   cd android/contrib
+   ./compile-ffmpeg.sh clean
+   ./compile-ffmpeg.sh all
+```
+```
+10. 编译ijlayer
+   cd ..
+   ./compile-ijk.sh all
+```
+
+#
 #### 记录1 => 编译问题
 ```
 1. undefined reference to "--disable-ffserver"
@@ -90,63 +149,4 @@ libavfilter:
 ```
 libpostproc:
 音视频后期处理库，当使用libavfilter的时候需要打开该模块开关，因为Filter中会使用该库中的一些基础函数。
-```
-
-#
-#### 编译
-```
-1. 安装相关工具
-   apt-get update
-   apt-get install git
-   apt-get install yasm
-```
-```
-2. 配置系统环境变量
-   /etc/profile
-   export ANDROID_NDK=/home/kalu/Android/android-ndk-r14b
-   export PATH=$ANDROID_NDK:$PATH
-   export ANDROID_SDK=/home/kalu/Android/Sdk
-   export PATH=${PATH}:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
-```
-```
-3. 设置的环境变量生效[ndk-build -v、adb version]
-   source /etc/profile
-```
-```
-4. 下载libyuv
-   ./init-android-libyuv.sh
-```
-```
-5. 下载soundtouch
-   ./init-android-soundtouch.sh
-```
-```
-6. 下载ffmpeg
-   ./init-android.sh
-```
-```
-7. 下载openssl
-   ./init-android-openssl.sh
-```
-```
-8.  编译openssl
-   cd android/contrib
-   ./compile-openssl.sh clean
-   ./compile-openssl.sh all
-```
-```
-9. 编译ffmpeg
-   cd ../..
-   cd config
-   rm module.sh
-   ln -s module-lite.sh module.sh
-   cd ..
-   cd android/contrib
-   ./compile-ffmpeg.sh clean
-   ./compile-ffmpeg.sh all
-```
-```
-10. 编译ijlayer
-   cd ..
-   ./compile-ijk.sh all
 ```
