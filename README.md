@@ -51,6 +51,7 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 7. 下载openssl
    ./init-android-openssl.sh
 ```
+```
 8.  软链module.sh
    cd config
    rm module.sh
