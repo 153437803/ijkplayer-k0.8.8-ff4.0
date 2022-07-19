@@ -121,11 +121,11 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 **/ijkmedia/ijksdl/Android.mk文件，修改ijkffmpeg和ijksdk的名称分别为ijkffmpeg***、ijksdk***
 ```
 ```
-3. libijkffmpeg.so，
+3. libijkffmpeg.so
 **/android/contrib/tools/do-compile-ffmpeg.sh文件，替换其中的两处libijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so
 ```
 ```
-4. libijkffmpeg.so，
+4. libijkffmpeg.so
 **/android/ijkplayer/**/src/mian/jni/Android.mk文件，替换其中的两处libijkffmpeg.so和ijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so
 ```
 
