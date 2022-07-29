@@ -126,7 +126,7 @@ https://github.com/android/ndk/wiki/Unsupported-Downloads
 ```
 ```
 4. libijkffmpeg.so
-**/android/ijkplayer/**/src/mian/jni/Android.mk文件，替换其中的两处libijkffmpeg.so和ijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so
+**/android/ijkplayer/**/src/mian/jni/ffmpeg/Android.mk文件，替换其中的两处libijkffmpeg.so和ijkffmpeg.so，修改成自己想要的名称libijkffmpeg***.so
 ```
 
 #
